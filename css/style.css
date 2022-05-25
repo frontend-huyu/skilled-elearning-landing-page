@@ -1,0 +1,77 @@
+/* Google Font - Plus Jakarta Sans */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap');
+
+/* :root { css declarations } */
+:root {
+  /* Fonts */
+  --font-main: 'Plus Jakarta Sans', sans-serif;
+  /* Colors */
+  --colors-dark-blue-gray: #666CA3;
+  --colors-black-blue: #13183f;
+  --colors-dark-silver: #83869A;
+  --colors-cherry-pink: #F74780;
+  --colors-flamingo-pink: #FFA7C3;
+  --colors-white: #FFFFFF;
+  /* note: 0deg(↑), 90deg(→), 180deg(↓), 270deg(←) */
+  --colors-gradient-orange: linear-gradient(to top, #F02AA6 0%, #ff6f48 100%);
+  --colors-gradient-blue: linear-gradient(to top, #f02aa6 -10%, #4851ff 100%);
+  --colors-gradient-hover: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(255, 225, 225, 0.5));
+}
+
+/* Global Rules */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  font-weight: 800;
+  cursor: default;
+}
+
+/* Typography */
+.heading-xl {
+  font-size: 56px;
+  line-height: 70px;
+}
+
+.heading-l {
+  font-size: 40px;
+  line-height: 51px;
+}
+
+.heading-m {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.heading-s {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.body-m {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.body-s {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.btn {
+  font-weight: 700px;
+  font-size: 18px;
+  line-height: 28px;
+}
