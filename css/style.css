@@ -38,6 +38,14 @@ body {
   cursor: default;
 }
 
+/* Reset */
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
 /* text/background--width/height--layout */
 /* Typography */
 .heading-xl {
@@ -84,7 +92,6 @@ body {
   color: var(--colors-white);
   letter-spacing: 0px;
   text-align: center;
-  text-decoration: none;
 
   width: 167px;
   height: 56px;
@@ -94,29 +101,87 @@ body {
 
 .header__btn {
   background-color: var(--colors-black-blue);
-
-  width: 167px;
-  height: 63px;
-  padding: 19px 31px 16px 32px;
-  border-radius: 31.5px;
 }
 
 .hero__btn {
-  padding: 19px 31px 16px 32px;
   background-image: var(--colors-gradient-orange);
+
+  width: 167px;
+  height: 63px;
+  padding: 19px 31px 19px 32px;
+  border-radius: 31.5px;
 }
 
 .footer__btn {
   background-image: var(--colors-gradient-blue);
 }
 
-/* Containers */
-/* .container {
-  margin-left: auto;
-  margin-right: auto;
-} */
+/* Hover */
+.header__btn:hover {
+  background-color: var(--colors-dark-blue-gray);
+}
+
+.hero__btn:hover {
+  background-image: var(--colors-gradient-hover), var(--colors-gradient-orange);
+}
+
+.footer__btn:hover {
+  background-image: var(--colors-gradient-hover), var(--colors-gradient-blue);
+}
+
+.link:hover {
+  color: var(--colors-flamingo-pink);
+}
+
+/* body-background */
+body {
+  background: url(../assets/image-hero-desktop.webp) no-repeat;
+  background-position: 734px -146px;
+}
 
 /* Header */
+.header__container {
+  top: 0px;
+  left: 0px;
+  padding: 24px 165px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  height: 837px;
+}
+
+.hero__content {
+  position: absolute;
+  width: 457px;
+  height: 359px;
+  top: 148px;
+  left: 165px;
+}
+
+.hero__content p {
+  margin: 29px 12px 103px 0px;
+}
+
+.hero__content a {
+  font-weight: 700;
+  bottom: 0px;
+  left: 0px;
+}
+
+/* .hero__img {
+  z-index: -1;
+}
+
+.hero__img img {
+  object-position: left bottom;
+} */
+
 
 /* Courses section */
 .courses {
@@ -204,7 +269,6 @@ body {
 .footer__container {
   background-color: var(--colors-black-blue);
 
-  position: sticky;
   height: 120px;
   bottom: 0px;
   left: 0px;
@@ -216,6 +280,12 @@ body {
 }
 
 /* Others */
+a {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700px;
+}
+
 .link {
   font-size: 18px;
   line-height: 28px;
@@ -228,14 +298,9 @@ body {
   height: 28px;
   left: 32px;
   bottom: 40px;
-  top: calc(50% - 28px/2 + 95px);
 }
 
-
-
-@media (max-width: 767px) {
-
-  /* Typography */
+/* @media (max-width: 767px) {
   .heading-xl {
     font-size: 40px;
     line-height: 50.4px;
@@ -262,7 +327,6 @@ body {
     line-height: 26px;
   }
 
-  /* Buttons */
   .btn {
     font-size: 16px;
 
@@ -276,12 +340,7 @@ body {
 
     padding: 19px 31px 16px 32px;
   }
-
-
-
-  /* Others */
-
-}
+} */
 
 /* @media (max-width: 480px) {} */
 
