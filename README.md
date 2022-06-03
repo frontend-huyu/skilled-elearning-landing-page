@@ -1,5 +1,5 @@
 # Skilled e-learning landing page
-![Preview for Skilled E-learning landing page]()
+![Preview for Skilled E-learning landing page](./preview.jpg)
 
 ## :black_nib: Overview
 Hi, there! I'm Huyu. </br>
