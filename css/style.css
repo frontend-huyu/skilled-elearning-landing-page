@@ -34,7 +34,6 @@ html {
 
 body {
   font-family: var(--font-main);
-  font-weight: 800;
   cursor: default;
 }
 
@@ -44,11 +43,13 @@ a {
   text-decoration: none;
   outline: none;
   cursor: pointer;
+  font-weight: 700;
 }
 
-/* text/background--width/height--layout */
+/* --Utilities-- */
 /* Typography */
 .heading-xl {
+  font-weight: 800;
   font-size: 56px;
   line-height: 70px;
   color: var(--colors-black-blue);
@@ -56,16 +57,18 @@ a {
 
 /* .heading-l {
   font-size: 40px;
-  line-height: 51px;
+  line-height: 50px;
 } */
 
 .heading-m {
+  font-weight: 800;
   font-size: 32px;
   line-height: 40px;
   color: var(--colors-white);
 }
 
 .heading-s {
+  font-weight: 800;
   font-size: 24px;
   line-height: 28px;
   color: var(--colors-black-blue);
@@ -86,16 +89,16 @@ a {
 
 /* Buttons */
 .btn {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 28px;
   font-weight: 700;
   color: var(--colors-white);
   letter-spacing: 0px;
   text-align: center;
 
-  width: 167px;
-  height: 56px;
-  padding: 14px 31px 14px 32px;
+  width: 140px;
+  height: 48px;
+  padding: 9px 24px 11px 24px;
   border-radius: 28px;
 }
 
@@ -107,8 +110,8 @@ a {
   background-image: var(--colors-gradient-orange);
 
   width: 167px;
-  height: 63px;
-  padding: 19px 31px 19px 32px;
+  height: 56px;
+  padding: 15px 37px 15px 38px;
   border-radius: 31.5px;
 }
 
@@ -116,122 +119,61 @@ a {
   background-image: var(--colors-gradient-blue);
 }
 
-/* Hover */
-.header__btn:hover {
-  background-color: var(--colors-dark-blue-gray);
-}
-
-.hero__btn:hover {
-  background-image: var(--colors-gradient-hover), var(--colors-gradient-orange);
-}
-
-.footer__btn:hover {
-  background-image: var(--colors-gradient-hover), var(--colors-gradient-blue);
-}
-
-.link:hover {
-  color: var(--colors-flamingo-pink);
-}
-
-/* body-background */
-body {
-  background: url(../assets/image-hero-desktop.webp) no-repeat;
-  background-position: 734px -146px;
+/* Container */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  /* note: when device-width is over 1025px, it will adjust automatically */
 }
 
 /* Header */
 .header__container {
-  top: 0px;
-  left: 0px;
-  padding: 24px 165px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+.logo img {
+  width: 89px;
+  height: 35px;
+  object-fit: contain;
+}
+
 /* Hero section */
-.hero {
+.hero__container {
   position: relative;
-  height: 837px;
-}
-
-.hero__content {
-  position: absolute;
-  width: 457px;
-  height: 359px;
-  top: 148px;
-  left: 165px;
-}
-
-.hero__content p {
-  margin: 29px 12px 103px 0px;
 }
 
 .hero__content a {
+  line-height: 26px;
   font-weight: 700;
-  bottom: 0px;
-  left: 0px;
 }
-
-/* .hero__img {
-  z-index: -1;
-}
-
-.hero__img img {
-  object-position: left bottom;
-} */
-
 
 /* Courses section */
 .courses {
   background-image: linear-gradient(180deg, #FFFFFF 0%, #F0F1FF 100%);
-
-  left: 0px;
-  top: 837px;
-
 }
 
 .courses__container {
-  padding: 0px 165px 140px;
-
   display: flex;
   flex-wrap: wrap;
-  row-gap: 56px;
-  column-gap: 30px;
+  justify-content: center;
 }
 
 .courses__heading {
   background-image: var(--colors-gradient-orange);
+  border-radius: 10px;
 
-  width: 350px;
-  height: 322px;
-  border-radius: 15px;
-  padding: 64px 32px;
+  height: 120px;
 }
 
 .courses__course {
   background-color: var(--colors-white);
   box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+  border-radius: 10px;
 
   position: relative;
-  width: 350px;
-  height: 322px;
-  border-radius: 15px;
-  padding: 64px 32px;
-}
-
-.courses__course h3 {
-  position: absolute;
-  height: 30px;
-  top: 64px;
-  left: 32px;
-}
-
-.courses__course p {
-  position: absolute;
-  width: 286px;
-  top: 118px;
+  height: 259px;
 }
 
 .courses__course::before {
@@ -242,7 +184,7 @@ body {
   width: 56px;
   height: 56px;
   top: -24px;
-  left: 32px;
+  left: 28px;
 }
 
 .courses__course.animation::before {
@@ -265,51 +207,76 @@ body {
   background-image: url(../assets/icon-business.svg);
 }
 
+.courses__course .link {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700px;
+  color: var(--colors-cherry-pink);
+
+  position: absolute;
+  width: 104px;
+  height: 28px;
+  left: 28px;
+  bottom: 32px;
+}
+
 /* Footer */
 .footer__container {
   background-color: var(--colors-black-blue);
 
+  width: auto;
   height: 120px;
   bottom: 0px;
   left: 0px;
-  padding: 32px 165px;
+  padding: 36px 16px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Others */
-a {
-  font-size: 18px;
-  line-height: 28px;
-  font-weight: 700px;
+/* Desktop--Active: Hover */
+.header__btn:hover {
+  background-color: var(--colors-dark-blue-gray);
 }
 
-.link {
-  font-size: 18px;
-  line-height: 28px;
-  font-weight: 700px;
-  color: var(--colors-cherry-pink);
-  text-decoration: none;
-
-  position: absolute;
-  width: 104px;
-  height: 28px;
-  left: 32px;
-  bottom: 40px;
+.hero__btn:hover {
+  background-image: var(--colors-gradient-hover), var(--colors-gradient-orange);
 }
 
-/* @media (max-width: 767px) {
+.footer__btn:hover {
+  background-image: var(--colors-gradient-hover), var(--colors-gradient-blue);
+}
+
+.link:hover {
+  color: var(--colors-flamingo-pink);
+}
+
+/* --Utilities-- */
+
+
+/**
+ * Basic CSS Media Query Template
+ * Author: Michael Vieth
+ * ------------------------------------------
+ *  Responsive Grid Media Queries - 1280, 1024, 768, 480
+ *   1280-1024   - desktop (default grid)
+ *   1024-768    - tablet landscape
+ *   768-480     - tablet 
+ *   480-less    - phone landscape & smaller
+ * --------------------------------------------
+ */
+@media all and (max-width: 480.99px) {
+
+  /* Typography */
   .heading-xl {
     font-size: 40px;
-    line-height: 50.4px;
+    line-height: 50px;
   }
 
   .body-m {
     font-size: 16px;
     line-height: 26px;
-    font-weight: 500;
   }
 
   .heading-m {
@@ -319,7 +286,81 @@ a {
 
   .heading-s {
     font-size: 20px;
-    line-height: 25.2px;
+    line-height: 25px;
+  }
+
+  /* Header */
+  .header__container {
+    padding: 16px;
+  }
+
+  /* Hero section */
+  .hero {
+    padding: 22px 16px 0px;
+  }
+
+  .hero__container {
+    width: auto;
+    height: 650px;
+  }
+
+  .hero__content {
+    height: 285px;
+  }
+
+  .hero__content p {
+    padding: 26px 0px;
+  }
+
+  .hero__btn {
+    position: absolute;
+    top: 228px;
+  }
+
+  .hero__img {
+    padding: 20px 0px 0px;
+  }
+
+  .hero__img img {
+    width: 375px;
+    height: auto;
+  }
+
+  /* Courses section */
+
+  .courses {
+    padding: 0px 0px 80px;
+  }
+
+  .courses__container {
+    width: auto;
+    height: 1695px;
+    padding: 0px 16px;
+  }
+
+  .courses__heading {
+    width: 343px;
+    height: 120px;
+    padding: 24px 29px;
+  }
+
+  .courses__course {
+    width: 343px;
+    height: 259px;
+    padding: 56px 28px;
+  }
+
+  .courses__course p {
+    margin: 16px 0px;
+  }
+}
+
+@media all and (min-width: 481px) and (max-width: 768.99px) {
+
+  /* Typography */
+  .heading-xl {
+    font-size: 40px;
+    line-height: 50px;
   }
 
   .body-m {
@@ -327,25 +368,316 @@ a {
     line-height: 26px;
   }
 
-  .btn {
-    font-size: 16px;
+  .heading-m {
+    font-size: 24px;
+    line-height: 32px;
+  }
 
-    width: 140px;
-    height: 48px;
-    padding: 9px 24px 11px;
+  .heading-s {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  /* Header */
+  .header__container {
+    padding: 24px 40px;
+  }
+
+  /* background */
+  body {
+    background: url(../assets/image-hero-tablet.webp) no-repeat;
+    background-position: 386px -92px;
+  }
+
+  /* Hero section */
+  .hero {
+    padding: 75px 0px 186px 39px;
+  }
+
+  .hero__container {
+    width: 768px;
+    height: auto;
+  }
+
+  .hero__content {
+    width: 398px;
+    height: 284px;
+  }
+
+  .hero__content p {
+    padding: 25px 0px;
   }
 
   .hero__btn {
-    line-height: 26px;
-
-    padding: 19px 31px 16px 32px;
+    position: absolute;
+    top: 228px;
+    left: 0px;
   }
-} */
 
-/* @media (max-width: 480px) {} */
+  .hero__img {
+    display: none;
+  }
 
-/* @media (min-width: 768px) and (max-width: 979px) {}
+  /* Courses section */
 
-@media (min-width: 980px) {}
+  .courses {
+    padding: 24px 0px 86px;
+  }
 
-@media (min-width: 1200px) {} */
+  .courses__container {
+    width: auto;
+    height: auto;
+    padding: 0px 16px;
+    row-gap: 32px;
+    column-gap: 10px;
+  }
+
+  .courses__heading {
+    width: 339px;
+    height: 259px;
+    padding: 56px 21px;
+  }
+
+  .courses__course {
+    width: 340px;
+    height: 259px;
+    padding: 56px 22px 0px 32px;
+  }
+
+  .courses__course p {
+    margin: 16px 0px;
+  }
+
+  .footer__container {
+    padding: 24px 40px;
+  }
+}
+
+@media all and (min-width: 769px) and (max-width: 1280.99px) {
+
+  /* Typography */
+  .heading-xl {
+    font-size: 56px;
+    line-height: 70px;
+  }
+
+  .body-m {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .heading-m {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .heading-s {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  /* Header */
+  .header__container {
+    padding: 24px min(12.5%, 165px);
+  }
+
+  /* background */
+  body {
+    background: url(../assets/image-hero-tablet.webp) no-repeat;
+    /* 386~784 / -92~-146 */
+    background-position-x: min(150%, 784px);
+    background-position-y: min(-10%, 146px);
+  }
+
+  /* Hero section */
+  .hero {
+    padding-top: max(5%, 91px);
+    padding-bottom: max(5%, 186px);
+    padding-left: min(12.5%, 165px);
+  }
+
+  .hero__container {
+    width: auto;
+    height: auto;
+  }
+
+  .hero__content {
+    width: max(25%, 398px);
+    height: max(25%, 284px);
+  }
+
+  .hero__content p {
+    padding: 25px 0px;
+  }
+
+  .hero__btn {
+    position: absolute;
+    top: 394px;
+    left: 0px;
+  }
+
+  .hero__img {
+    display: none;
+  }
+
+  /* Courses section */
+
+  .courses {
+    padding-bottom: min(10%, 140px);
+    padding-left: min(12.5%, 165px);
+    padding-right: min(12.5%, 165px);
+  }
+
+  .courses__container {
+    width: auto;
+    height: auto;
+    row-gap: 32px;
+    column-gap: 10px;
+  }
+
+  .courses__heading {
+    width: 350px;
+    height: 322px;
+    padding: 64px 32px;
+  }
+
+  .courses__course {
+    width: 350px;
+    height: 322px;
+    padding: 64px 32px;
+  }
+
+  .courses__course p {
+    margin: 24px 0px;
+  }
+
+  .footer__container {
+    padding: 24px min(11%, 165px);
+  }
+
+}
+
+/* Desktop */
+@media all and (min-width: 1281px) {
+
+  /* Typography */
+  .heading-xl {
+    font-size: 56px;
+    line-height: 70px;
+  }
+
+  .body-m {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .heading-m {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .heading-s {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  /* Header */
+  .header__container {
+    padding: 24px 165px;
+  }
+
+  /* background */
+  body {
+    background: url(../assets/image-hero-desktop.webp) no-repeat;
+    /* 386~784 / -92~-146 */
+    background-position-x: 784px;
+    background-position-y: -146px;
+  }
+
+  /* logo */
+  .logo img {
+    width: 114px;
+    height: 45px;
+    object-fit: contain;
+  }
+
+  .btn {
+    font-size: 18px;
+    line-height: 28px;
+
+    width: 167px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hero section */
+  .hero {
+    padding-top: 172px;
+    padding-bottom: 256px;
+    padding-left: 165px;
+  }
+
+  .hero__container {
+    width: auto;
+    height: auto;
+  }
+
+  .hero__content {
+    width: 457px;
+    height: 359px;
+  }
+
+  .hero__content p {
+    padding: 29px 0px;
+  }
+
+  .hero__btn {
+    position: absolute;
+    top: 306px;
+    left: 0px;
+    width: 167px;
+    height: 63px;
+  }
+
+  .hero__img {
+    display: none;
+  }
+
+  /* Courses section */
+
+  .courses {
+    padding-bottom: min(10%, 140px);
+    padding-left: min(12.5%, 165px);
+    padding-right: min(12.5%, 165px);
+  }
+
+  .courses__container {
+    width: auto;
+    height: auto;
+    row-gap: 62px;
+    column-gap: 30px;
+  }
+
+  .courses__heading {
+    width: 350px;
+    height: 322px;
+    padding: 64px 32px;
+  }
+
+  .courses__course {
+    width: 350px;
+    height: 322px;
+    padding: 64px 32px;
+  }
+
+  .courses__course p {
+    margin: 24px 0px;
+  }
+
+  .footer__container {
+    padding: 24px 165px;
+  }
+}

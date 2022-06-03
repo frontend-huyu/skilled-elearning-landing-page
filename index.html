@@ -7,7 +7,11 @@
   <!-- (for IE)Let browser run highest mode available to the version of IE -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Display site properly based on user device -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+  <!-- Prevent landscape orientation Mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
   <!-- Provide information for SEO -->
   <meta name="description"
     content="A practices to the Skilled e-learning landing page challenge from frontendmentor.io">
@@ -42,15 +46,15 @@
             knowledge you need to live the life you want.</p>
           <a href="#" class="hero__btn btn">Get Started</a>
         </div>
-        <!-- <div class="hero__img"> -->
-        <!-- <picture> is not supported by IE => picturefill -->
-        <!-- <picture>
+        <div class="hero__img">
+          <!-- <picture> is not supported by IE => picturefill -->
+          <picture>
             <source media="(min-width: 992px)" srcset="./assets/image-hero-desktop.webp">
             <source media="(min-width: 768px)" srcset="./assets/image-hero-tablet.webp">
             <source media="(min-width: 375px)" srcset="./assets/image-hero-mobile.webp">
             <img src="./assets/image-hero-mobile.svg" alt="hero image">
-          </picture> -->
-      </div>
+          </picture>
+        </div>
       </div>
     </section>
 
